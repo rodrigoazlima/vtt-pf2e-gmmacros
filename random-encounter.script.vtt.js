@@ -100,10 +100,6 @@ randomEncounter.handleEncounter = async function () {
         await randomEncounter.logEncounter(encounterResults, rollResult, dc, hasCreature);
     } catch (error) {
         console.log(error);
-        await ChatMessage.create({
-            user: game.user.id,
-            content: error,
-        });
     }
 }
 
